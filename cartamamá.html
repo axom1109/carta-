@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz Día de las Madres</title>
+  <style>
+    body {
+      background: #ffe6f0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .carta {
+      background: white;
+      border: 2px solid #ff80ab;
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      color: #d81b60;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .mensaje {
+      display: none;
+      margin-top: 20px;
+      color: #444;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    button {
+      background-color: #f06292;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #ec407a;
+    }
+
+    .corazon {
+      font-size: 2em;
+      color: #e91e63;
+      animation: latido 1s infinite;
+    }
+
+    @keyframes latido {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+    
+  <div class="carta">
+    <audio autoplay src="audio/AUD-20230512-WA0031.mp3"></audio>
+    <h1>💐 ¡Feliz Día de las Madres! 💐</h1>
+    <div class="corazon">❤️</div>
+    <button onclick="mostrarMensaje()">Haz clic para leer tu carta</button>
+    <div class="mensaje" id="mensaje">
+      <p>Querida mamá,</p>
+      <p>Hoy quiero agradecerte por todo tu amor, tu paciencia infinita y por estar siempre ahí para mí. Eres mi ejemplo a seguir, mi fuerza y mi hogar.</p>
+      <p>Gracias por ser la mejor mamá del mundo. ¡Te amo con todo mi corazón!</p>
+      <p>Con amor,</p>
+      <p><strong>De Ana Ximena</strong> ❤️</p>
+    </div>
+  </div>
+
+  <script>
+    function mostrarMensaje() {
+      const mensaje = document.getElementById('mensaje');
+      mensaje.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
